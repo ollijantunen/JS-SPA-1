@@ -1,4 +1,5 @@
 "use strict";
+
 // Load the content with DOM location hash property
 function loadContent() {
   let contentDiv = document.getElementById("app");
@@ -11,9 +12,9 @@ function loadContent() {
 
 function getContent(fragmentId, callback) {
   let pages = {
-    home: "Welcome to this page.",
-    about: "This site is about SPA.",
-    contact: "You can call me on my cellphone."
+    home: home,
+    about: about,
+    contact: contact,
   };
   callback(pages[fragmentId]);
 }
