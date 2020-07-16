@@ -5,7 +5,7 @@ function loadContent() {
   let contentDiv = document.getElementById("app");
   let fragmentId = location.hash.substr(1);
   //contentDiv.innerHTML = getContent(fragmentId);
-  getContent(fragmentId, function (content) {
+  getContent(fragmentId, function(content) {
     contentDiv.innerHTML = content;
   })
 }
@@ -13,13 +13,13 @@ function loadContent() {
 function getContent(fragmentId, callback) {
   let pages = {
     home: home,
-    about: about,
+    questionnaire: questionnaire,
     contact: contact,
   };
   callback(pages[fragmentId]);
 }
 
-if(!location.hash) {
+if (!location.hash) {
   location.hash = "#home";
 }
 
